@@ -1,15 +1,24 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
-        <script src="{{ url_for('static', filename='script.js') }}"></script>
-        <title>Onlin Chat</title>
-    </head>
-    <body>
-      <div>
-        <span id="demo">Your Name</span>
+{% extends "layout.html" %}
+{% block title %}
+  Home
+{% endblock%}
+
+{% block body %}
+<div class="container">
+  <div class="logo">
+    <img src="static/img/logo.png" alt="Flack" />
+    <h2>Flack Chat</h2>
+  </div>
+  <div class="form_username">
+    <form class="" method="POST">
+      <div class="form-group">
+        <label for="username"><h4>Please! Enter Your Name</h4></label>
+        <input type="text" class="form-control form-control-lg" name="name" id="username" placeholder="Enter Name" autofocus />
       </div>
 
+      <button type="submit" class="btn btn-primary btn-lg">Login</button>
+    </form>
+  </div>
+</div>
 
-    </body>
-</html>
+{% endblock%}
